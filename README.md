@@ -8,10 +8,11 @@ Este proyecto utiliza **Docker Compose** para levantar un contenedor de **Postgr
 ## 📁 Estructura del proyecto
 ```
 
-docker-postgres-pgadmin/
+/
 ├─ docker-compose.yml
-├─ scripts/
-│ └─ init_db.sql # Opcional: script para crear base de datos y tablas
+├─ servilimar.ddl # script para crear las tablas
+├─ servilimar.dml # script para insertar datos en la tabla
+├─ servilimar_backup.sql # backup de toda la bd para restaurar
 └─ README.md
 
 ````
