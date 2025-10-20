@@ -1,5 +1,3 @@
----
-
 ```markdown
 # Proyecto Docker PostgreSQL + pgAdmin
 
@@ -8,16 +6,15 @@ Este proyecto utiliza **Docker Compose** para levantar un contenedor de **Postgr
 ---
 
 ## 📁 Estructura del proyecto
-
 ```
 
 docker-postgres-pgadmin/
 ├─ docker-compose.yml
 ├─ scripts/
-│   └─ init_db.sql        # Opcional: script para crear base de datos y tablas
+│ └─ init_db.sql # Opcional: script para crear base de datos y tablas
 └─ README.md
 
-```
+````
 
 ## ⚙️ 1. Requisitos previos
 
@@ -33,7 +30,7 @@ En la terminal, navega a la carpeta del proyecto:
 
 ```bash
 cd docker-postgres-pgadmin
-```
+````
 
 Ejecuta:
 
