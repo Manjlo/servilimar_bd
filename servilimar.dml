@@ -1,0 +1,40 @@
+
+INSERT INTO Ciudad (nombre_ciudad, codigo_postal) VALUES
+('Cali', '760001'),
+('Bogotá', '110111');
+
+INSERT INTO Tipo_Usuario (nombre) VALUES
+('Cliente'), ('Empleado'), ('Proveedor');
+
+INSERT INTO Condicion (nombre, descripcion) VALUES
+('Embarazo', 'Usuario embarazado'),
+('Silla de ruedas', 'Requiere acceso especial'),
+('Adulto mayor', 'Mayor de 60 años');
+
+INSERT INTO Usuario (nombre, apellido, tipo_usuario_id, ciudad_id) VALUES
+('Jhonatan', 'Castaño', 2, 1),
+('Valentina', 'Ruiz', 1, 2),
+('Carlos', 'López', 3, 1);
+
+INSERT INTO Usuario_Condicion (usuario_id, condicion_id) VALUES
+(2, 3),
+(3, 2);
+
+INSERT INTO Servicio (nombre, descripcion) VALUES
+('Despacho', 'Entrega de artículos'),
+('Atención al Cliente', 'Gestión de solicitudes'),
+('Consultoría', 'Asesoría especializada');
+
+INSERT INTO Empleado (usuario_id, cargo, departamento) VALUES
+(1, 'Técnico', 'Operaciones');
+
+INSERT INTO Turno (usuario_id, servicio_id, empleado_id, fecha, hora_inicio, hora_fin, estado) VALUES
+(2, 1, 1, '2025-10-20', '08:00', '09:00', 'Confirmado'),
+(3, 2, 1, '2025-10-21', '09:00', '10:30', 'Pendiente');
+
+INSERT INTO Medio_Notificacion (nombre) VALUES
+('Correo'), ('SMS'), ('Teléfono');
+
+INSERT INTO Notificacion (usuario_id, medio_id, mensaje, estado) VALUES
+(2, 1, 'Su turno ha sido agendado', 'Enviado'),
+(3, 2, 'Tiene un turno pendiente', 'Pendiente');

@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres_servilimar
+    environment:
+      POSTGRES_USER: ulimar
+      POSTGRES_PASSWORD: ex4men_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    networks:
+      - servilimar_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_servilimar
+    environment:
+      PGADMIN_DEFAULT_EMAIL: usuario@servilimar.com
+      PGADMIN_DEFAULT_PASSWORD: limar#123
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - servilimar_network
+
+networks:
+  servilimar_network:
+    driver: bridge
